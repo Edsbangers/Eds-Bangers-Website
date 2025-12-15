@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Ed's Bangers",
   tagline: "Award-winning artisan sausages & sauces",
   description: "Great Taste Producer. Handcrafted sausages and sauces from Hampshire. UK Sausage Week finalists.",
-  email: "hello@edsbangers.com",
+  email: "edsbangers@gmail.com",
   phone: "", // Add when ready
   location: "Hampshire, UK",
   social: {

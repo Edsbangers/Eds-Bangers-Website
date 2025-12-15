@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { awards, bangers, sauces, greatTasteYears } from '@/lib/data';
 
 export default function Home() {
@@ -19,26 +20,17 @@ export default function Home() {
         />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Logo Area */}
+          {/* Logo */}
           <div className="mb-6 animate-fade-in-up">
-            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-eds-red to-eds-red-dark flex items-center justify-center text-white text-4xl font-bold shadow-xl">
-              EB
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Ed's Bangers"
+              width={250}
+              height={250}
+              className="mx-auto"
+              priority
+            />
           </div>
-
-          {/* Main Heading */}
-          <h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 animate-fade-in-up"
-            style={{
-              fontFamily: '"Fredoka One", cursive',
-              color: '#C41E3A',
-              textShadow: '4px 4px 0 #000',
-              animationDelay: '0.2s',
-              animationFillMode: 'both',
-            }}
-          >
-            Ed&apos;s Bangers
-          </h1>
 
           <p
             className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8 animate-fade-in-up"

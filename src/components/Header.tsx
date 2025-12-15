@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { siteConfig } from '@/lib/data';
 
@@ -29,26 +30,21 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-eds-cream/98 shadow-lg backdrop-blur-sm py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-eds-cream/98 shadow-lg backdrop-blur-sm py-2'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 rounded-full bg-eds-red flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform">
-            EB
-          </div>
-          <span
-            className="text-xl md:text-2xl font-bold tracking-tight"
-            style={{
-              fontFamily: '"Fredoka One", cursive',
-              color: '#C41E3A',
-              textShadow: '2px 2px 0 #000',
-            }}
-          >
-            {siteConfig.name}
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/images/logo.png"
+            alt="Ed's Bangers"
+            width={80}
+            height={80}
+            className="group-hover:scale-105 transition-transform"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
