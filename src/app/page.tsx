@@ -227,7 +227,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
               <Image src="/images/gbfa-finalist-2022.jpg" alt="Great British Food Awards 2022 Finalist" width={90} height={106} className="rounded-lg" />
-              <p className="text-xs font-bold text-eds-charcoal text-center">Mighty Tashio Banger</p>
+              <p className="text-xs font-bold text-eds-charcoal text-center">JD Sauce</p>
             </div>
             <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
               <Image src="/images/uksw-runner-up.jpg" alt="UK Sausage Week Runner Up 2019" width={110} height={98} className="rounded-lg" />
