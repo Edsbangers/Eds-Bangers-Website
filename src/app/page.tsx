@@ -67,13 +67,6 @@ export default function Home() {
             style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
           >
             <Image
-              src="/images/great-taste-producer.png"
-              alt="Great Taste Producer"
-              width={90}
-              height={90}
-              className="rounded-full shadow-lg"
-            />
-            <Image
               src="/images/gbfa-finalist-2022.jpg"
               alt="Great British Food Awards 2022 Finalist"
               width={100}
@@ -116,12 +109,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
-          <div className="w-8 h-12 border-2 border-eds-red rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-eds-red rounded-full animate-pulse" />
-          </div>
-        </div>
       </section>
 
       {/* Great Taste Producer Section */}

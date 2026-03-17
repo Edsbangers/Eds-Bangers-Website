@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { weddingPackages } from '@/lib/data';
 
 export default function WeddingsPage() {
   const [formData, setFormData] = useState({
@@ -93,51 +92,34 @@ export default function WeddingsPage() {
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="max-w-6xl mx-auto px-4 mb-16">
-        <h2
-          className="text-3xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
-        >
-          📦 Our Packages
-        </h2>
-        <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-          Choose from our popular packages or let us create something bespoke for your event.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {weddingPackages.map((pkg, index) => (
-            <div
-              key={pkg.id}
-              className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all ${
-                index === 1 ? 'md:-translate-y-4 border-2 border-eds-red' : ''
-              }`}
-            >
-              {index === 1 && (
-                <div className="bg-eds-red text-white text-center py-2 font-bold text-sm">
-                  ⭐ Most Popular
-                </div>
-              )}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-eds-charcoal mb-2">{pkg.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
-
-                <div className="space-y-2 mb-6">
-                  {pkg.includes.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-eds-red mt-0.5">✓</span>
-                      <span className="text-sm text-gray-600">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="border-t pt-4">
-                  <p className="text-sm text-gray-500 mb-1">Min. {pkg.minGuests} guests</p>
-                  <p className="text-xl font-bold text-eds-red">{pkg.priceFrom}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+      {/* Quote CTA */}
+      <section className="max-w-4xl mx-auto px-4 mb-16">
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg text-center">
+          <div className="text-5xl mb-4">💒</div>
+          <h2
+            className="text-3xl font-bold text-eds-charcoal mb-4"
+            style={{ fontFamily: '"Fredoka One", cursive' }}
+          >
+            Enquire for a Quote for Your Special Day
+          </h2>
+          <p className="text-gray-600 text-lg max-w-xl mx-auto mb-4">
+            Every event is different — tell us about your day and we&apos;ll put together something perfect just for you.
+          </p>
+          <p className="text-gray-500 mb-8">
+            Weddings, corporate events, birthday parties, festivals — we cater for all occasions across Hampshire and beyond.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mb-8">
+            {[
+              '🌭 Fresh-grilled award-winning bangers',
+              '🔥 Great Taste award-winning sauces',
+              '👨‍🍳 Professional on-site catering',
+              '❤️ Bespoke menus available',
+              '🌿 Vegetarian options',
+              '🤝 Flexible for any size event',
+            ].map((item) => (
+              <span key={item} className="flex items-center gap-2">{item}</span>
+            ))}
+          </div>
         </div>
       </section>
 
