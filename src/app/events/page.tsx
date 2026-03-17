@@ -173,14 +173,6 @@ export default function EventsPage() {
         </section>
       )}
 
-      {/* Add Event CTA for Admin */}
-      <section className="max-w-6xl mx-auto px-4 mt-16">
-        <div className="bg-eds-cream/50 border-2 border-dashed border-eds-brown/30 rounded-2xl p-8 text-center">
-          <p className="text-gray-600">
-            <strong>Note:</strong> To add events, update the <code className="bg-white px-2 py-1 rounded">events</code> array in <code className="bg-white px-2 py-1 rounded">/src/lib/data.ts</code>
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

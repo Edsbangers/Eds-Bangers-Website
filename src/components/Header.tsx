@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/events', label: 'Events' },
   { href: '/weddings', label: 'Weddings' },
   { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 

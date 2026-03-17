@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           ))}
         </div>
 
-        {/* Content */}
+        {/* Content — HTML is authored in src/lib/data.ts (trusted internal source) */}
         <div
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: post.content }}

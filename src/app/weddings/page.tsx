@@ -16,12 +16,26 @@ export default function WeddingsPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to your email/CRM
-    console.log('Booking enquiry:', formData);
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'wedding', ...formData }),
+      });
+      if (!res.ok) throw new Error('Failed to send');
+      setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please email us directly at edsbangers@gmail.com');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -297,11 +311,16 @@ export default function WeddingsPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-center text-sm text-eds-red font-semibold">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="w-full py-4 bg-eds-red text-white font-bold rounded-full hover:bg-eds-red-dark transition-all text-lg"
+                disabled={submitting}
+                className="w-full py-4 bg-eds-red text-white font-bold rounded-full hover:bg-eds-red-dark transition-all text-lg disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Enquiry →
+                {submitting ? 'Sending...' : 'Send Enquiry →'}
               </button>
 
               <p className="text-center text-sm text-gray-500">

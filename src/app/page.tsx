@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { awards, bangers, sauces, greatTasteYears } from '@/lib/data';
+import { awards, bangers, sauces, greatTasteYears, testimonials, pressFeatures } from '@/lib/data';
 
 export default function Home() {
   return (
@@ -314,6 +314,83 @@ export default function Home() {
             >
               Enquire Now →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 px-4 bg-eds-charcoal-dark">
+        <div className="max-w-6xl mx-auto">
+          <h2
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
+            style={{ fontFamily: '"Fredoka One", cursive' }}
+          >
+            💬 What People Say
+          </h2>
+          <p className="text-center text-gray-400 text-lg mb-12">
+            100% of Facebook reviewers recommend Ed&apos;s Bangers
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.slice(0, 3).map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-eds-cream rounded-2xl p-6 shadow-xl flex flex-col"
+              >
+                <div className="text-eds-red text-5xl leading-none mb-4 font-serif">&ldquo;</div>
+                <p className="text-eds-charcoal text-base leading-relaxed flex-1 mb-6">
+                  {testimonial.text}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-bold text-eds-charcoal">{testimonial.name}</p>
+                    <div className="flex gap-0.5 mt-1">
+                      {Array.from({ length: testimonial.rating }).map((_, i) => (
+                        <span key={i} className="text-eds-gold text-sm">★</span>
+                      ))}
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold text-white bg-eds-red px-3 py-1 rounded-full">
+                    {testimonial.source}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Press / As Seen In Section */}
+      <section className="py-16 md:py-24 px-4 bg-eds-cream">
+        <div className="max-w-5xl mx-auto">
+          <h2
+            className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
+            style={{ fontFamily: '"Fredoka One", cursive' }}
+          >
+            📰 As Seen In
+          </h2>
+          <p className="text-center text-gray-600 text-lg mb-12">
+            Recognised by the people who know great food
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {pressFeatures.map((feature) => (
+              <div
+                key={feature.id}
+                className="bg-white rounded-2xl p-6 shadow-md text-center hover:shadow-lg transition-shadow"
+              >
+                <div className="text-4xl mb-3">{feature.icon}</div>
+                <h3 className="font-bold text-eds-charcoal mb-2 text-sm leading-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-500 text-xs leading-snug mb-3">
+                  {feature.description}
+                </p>
+                <span className="text-xs font-bold text-eds-red bg-eds-red/10 px-3 py-1 rounded-full">
+                  {feature.year}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

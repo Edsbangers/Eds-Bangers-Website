@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: "Blog | Ed's Bangers® — News, Recipes & Stories",
+  description: "News, recipes, behind-the-scenes, and stories from the world of Ed's Bangers. Award-winning artisan sausages and sauces from Hampshire.",
+};
 
 export default function BlogPage() {
   const formatDate = (dateStr: string) => {
