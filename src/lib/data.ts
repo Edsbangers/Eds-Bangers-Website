@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "Award-winning artisan sausages & sauces",
   description: "Great Taste Producer. Handcrafted sausages and sauces from Hampshire. UK Sausage Week finalists.",
   email: "edsbangers@gmail.com",
-  phone: "",
+  phone: "07956 139772",
   location: "Hampshire, UK",
   social: {
     instagram: "https://instagram.com/edsbangers",
