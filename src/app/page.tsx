@@ -44,10 +44,13 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-3 mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
           >
-            <div className="flex items-center gap-2 px-4 py-2 bg-black text-eds-gold rounded-full border-2 border-eds-gold font-bold text-sm shadow-lg">
-              <span>⭐</span>
-              <span>Great Taste Producer</span>
-            </div>
+            <Image
+              src="/images/great-taste-producer.png"
+              alt="Great Taste Producer"
+              width={72}
+              height={72}
+              className="rounded-full shadow-lg"
+            />
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full font-bold text-sm shadow-lg">
               <span>🏆</span>
               <span>UK Sausage Week Finalist</span>
@@ -132,12 +135,14 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Badge */}
-          <div className="w-36 h-36 mx-auto mb-8 rounded-full bg-gradient-to-br from-eds-gold to-eds-gold-dark p-1 shadow-xl">
-            <div className="w-full h-full rounded-full bg-black flex flex-col items-center justify-center border-4 border-eds-gold">
-              <span className="text-white text-xs tracking-widest">great</span>
-              <span className="text-eds-gold text-2xl font-bold">taste</span>
-              <span className="text-eds-gold text-xs tracking-widest mt-1">PRODUCER</span>
-            </div>
+          <div className="mx-auto mb-8 w-fit">
+            <Image
+              src="/images/great-taste-producer.png"
+              alt="Great Taste Producer"
+              width={144}
+              height={144}
+              className="rounded-full shadow-2xl"
+            />
           </div>
 
           <h2
