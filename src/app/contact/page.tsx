@@ -72,6 +72,21 @@ export default function ContactPage() {
               </p>
             </div>
 
+            {/* Phone */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="text-3xl mb-3">📞</div>
+              <h3 className="font-bold text-lg text-eds-charcoal mb-2">Call Us</h3>
+              <a
+                href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+                className="text-eds-red hover:underline font-semibold"
+              >
+                {siteConfig.phone}
+              </a>
+              <p className="text-gray-500 text-sm mt-2">
+                Mon–Sat, 9am–6pm
+              </p>
+            </div>
+
             {/* Social */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
               <div className="text-3xl mb-3">📱</div>

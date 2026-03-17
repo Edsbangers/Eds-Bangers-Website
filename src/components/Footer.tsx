@@ -76,6 +76,15 @@ export default function Footer() {
                 <span>📧</span>
                 {siteConfig.email}
               </a>
+              {siteConfig.phone && (
+                <a
+                  href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                >
+                  <span>📞</span>
+                  {siteConfig.phone}
+                </a>
+              )}
               <p className="text-gray-400 flex items-center gap-2">
                 <span>📍</span>
                 {siteConfig.location}
