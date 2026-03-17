@@ -118,13 +118,45 @@ export default function ShopPage() {
         </p>
       </div>
 
+      {/* Coming Soon Banner */}
+      <section className="max-w-6xl mx-auto px-4 mb-10">
+        <div className="bg-gradient-to-br from-eds-charcoal to-eds-charcoal-dark rounded-2xl p-6 md:p-8 text-white text-center">
+          <div className="text-4xl mb-3">🚧</div>
+          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Fredoka One", cursive' }}>
+            Online Shop Coming Soon!
+          </h2>
+          <p className="text-gray-300 max-w-xl mx-auto mb-4">
+            We&apos;re not quite up and running with online ordering yet — but we&apos;re working on it!
+            Follow us on social media for updates on when you can get your hands on our award-winning sauces.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://instagram.com/edsbangers"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-eds-red text-white font-bold rounded-full hover:bg-eds-red-dark transition-all"
+            >
+              Follow on Instagram
+            </a>
+            <a
+              href="https://facebook.com/edsbangers1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all"
+            >
+              Follow on Facebook
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Sauce Bundle */}
       <section className="max-w-6xl mx-auto px-4 mb-10">
-        <div className="bg-gradient-to-br from-eds-charcoal to-eds-charcoal-dark rounded-2xl p-6 md:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-gradient-to-br from-eds-charcoal to-eds-charcoal-dark rounded-2xl p-6 md:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 opacity-60">
           <div>
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 bg-eds-gold text-black text-sm font-bold rounded-full">Save £{sauceBundle.saving.toFixed(2)}</span>
-              <span className="text-white/70 text-sm">Most Popular</span>
+              <span className="px-3 py-1 bg-gray-600 text-white text-sm font-bold rounded-full">Coming Soon</span>
             </div>
             <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Fredoka One", cursive' }}>
               🎁 {sauceBundle.name}
@@ -135,11 +167,8 @@ export default function ShopPage() {
           <div className="text-center flex-shrink-0">
             <p className="text-gray-400 line-through text-sm">£{sauceBundle.individualTotal.toFixed(2)}</p>
             <p className="text-3xl font-bold text-eds-gold">£{sauceBundle.bundlePrice.toFixed(2)}</p>
-            <button
-              onClick={() => addToCart({ id: sauceBundle.id, name: sauceBundle.name, price: sauceBundle.bundlePrice })}
-              className="mt-3 px-8 py-3 bg-eds-red text-white font-bold rounded-full hover:bg-eds-red-dark transition-all"
-            >
-              Add Bundle to Cart
+            <button disabled className="mt-3 px-8 py-3 bg-gray-600 text-gray-400 font-bold rounded-full cursor-not-allowed">
+              Coming Soon
             </button>
           </div>
         </div>
@@ -193,10 +222,10 @@ export default function ShopPage() {
                     £{sauce.price.toFixed(2)}
                   </span>
                   <button
-                    onClick={() => addToCart({ id: sauce.id, name: sauce.name, price: sauce.price, size: sauce.size })}
-                    className="px-6 py-3 bg-eds-red text-white font-bold rounded-full hover:bg-eds-red-dark transition-all hover:-translate-y-0.5"
+                    disabled
+                    className="px-6 py-3 bg-gray-300 text-gray-500 font-bold rounded-full cursor-not-allowed text-sm"
                   >
-                    Add to Cart
+                    Coming Soon
                   </button>
                 </div>
               </div>
