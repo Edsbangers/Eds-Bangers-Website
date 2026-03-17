@@ -58,16 +58,37 @@ export default function Home() {
             </div>
           </div>
 
-          {/* GBFA Logo */}
+          {/* Award Logos Row */}
           <div
-            className="flex justify-center mb-10 animate-fade-in-up"
+            className="flex flex-wrap justify-center items-center gap-4 mb-10 animate-fade-in-up"
             style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
           >
             <Image
+              src="/images/great-taste-producer.png"
+              alt="Great Taste Producer"
+              width={90}
+              height={90}
+              className="rounded-full shadow-lg"
+            />
+            <Image
               src="/images/gbfa-finalist-2022.jpg"
               alt="Great British Food Awards 2022 Finalist"
-              width={120}
-              height={140}
+              width={100}
+              height={118}
+              className="rounded-lg shadow-lg"
+            />
+            <Image
+              src="/images/uksw-runner-up.jpg"
+              alt="UK Sausage Week Runner Up 2019"
+              width={110}
+              height={98}
+              className="rounded-lg shadow-lg"
+            />
+            <Image
+              src="/images/uksw-highly-commended.jpg"
+              alt="UK Sausage Week Highly Commended 2019"
+              width={100}
+              height={84}
               className="rounded-lg shadow-lg"
             />
           </div>
@@ -193,17 +214,27 @@ export default function Home() {
             ))}
           </div>
 
-          {/* GBFA Logo in awards section */}
-          <div className="mt-8 flex justify-center">
+          {/* Award Logos in cabinet */}
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
-              <Image
-                src="/images/gbfa-finalist-2022.jpg"
-                alt="Great British Food Awards 2022 Finalist"
-                width={110}
-                height={130}
-                className="rounded-lg"
-              />
+              <Image src="/images/great-taste-producer.png" alt="Great Taste Producer" width={90} height={90} className="rounded-full" />
+              <p className="text-xs font-bold text-eds-charcoal text-center">Great Taste Producer</p>
+            </div>
+            <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
+              <Image src="/images/gbfa-finalist-2022.jpg" alt="Great British Food Awards 2022 Finalist" width={90} height={106} className="rounded-lg" />
               <p className="text-xs font-bold text-eds-charcoal text-center">Mighty Tashio Banger</p>
+            </div>
+            <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
+              <Image src="/images/uksw-runner-up.jpg" alt="UK Sausage Week Runner Up 2019" width={110} height={98} className="rounded-lg" />
+              <p className="text-xs font-bold text-eds-charcoal text-center">JD Banger</p>
+            </div>
+            <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
+              <Image src="/images/uksw-highly-commended.jpg" alt="UK Sausage Week Highly Commended 2019" width={100} height={84} className="rounded-lg" />
+              <p className="text-xs font-bold text-eds-charcoal text-center">Shroom Banger</p>
+            </div>
+            <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
+              <Image src="/images/fmt-award-2021.jpg" alt="Food Management Today Industry Awards 2021 Highly Commended" width={80} height={107} className="rounded-lg" />
+              <p className="text-xs font-bold text-eds-charcoal text-center">Tashio Banger</p>
             </div>
           </div>
 
@@ -224,9 +255,20 @@ export default function Home() {
           >
             🌭 The Bangers
           </h2>
-          <p className="text-center text-gray-600 text-lg mb-12">
+          <p className="text-center text-gray-600 text-lg mb-8">
             Award-winning sausages, made with love
           </p>
+
+          {/* Food hero image */}
+          <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/food-bangers.jpg"
+              alt="Ed's Bangers — award-winning artisan sausages"
+              width={900}
+              height={600}
+              className="w-full object-cover max-h-72"
+            />
+          </div>
 
           <div className="space-y-6">
             {bangers.map((banger) => (
