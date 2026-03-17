@@ -41,7 +41,7 @@ export default function Home() {
 
           {/* Award Badges */}
           <div
-            className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in-up"
+            className="flex flex-wrap justify-center gap-3 mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-black text-eds-gold rounded-full border-2 border-eds-gold font-bold text-sm shadow-lg">
@@ -56,6 +56,20 @@ export default function Home() {
               <span>®</span>
               <span>Registered Trademark</span>
             </div>
+          </div>
+
+          {/* GBFA Logo */}
+          <div
+            className="flex justify-center mb-10 animate-fade-in-up"
+            style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
+          >
+            <Image
+              src="/images/gbfa-finalist-2022.jpg"
+              alt="Great British Food Awards 2022 Finalist"
+              width={120}
+              height={140}
+              className="rounded-lg shadow-lg"
+            />
           </div>
 
           {/* CTA Buttons */}
@@ -179,7 +193,21 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-white/15 rounded-xl text-center text-white">
+          {/* GBFA Logo in awards section */}
+          <div className="mt-8 flex justify-center">
+            <div className="bg-white rounded-2xl p-4 shadow-xl flex flex-col items-center gap-2">
+              <Image
+                src="/images/gbfa-finalist-2022.jpg"
+                alt="Great British Food Awards 2022 Finalist"
+                width={110}
+                height={130}
+                className="rounded-lg"
+              />
+              <p className="text-xs font-bold text-eds-charcoal text-center">Mighty Tashio Banger</p>
+            </div>
+          </div>
+
+          <div className="mt-6 p-6 bg-white/15 rounded-xl text-center text-white">
             <p className="text-lg">
               Plus heaps of <strong>Gold, Silver & Bronze</strong> medals at the Hampshire Sausage & Pie Awards 2019–2023! 🥇🥈🥉
             </p>
