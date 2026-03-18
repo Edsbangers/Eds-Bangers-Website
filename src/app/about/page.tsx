@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { aboutEd, awards } from '@/lib/data';
 
@@ -28,13 +29,36 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="max-w-3xl mx-auto px-4 mb-20">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg space-y-6">
-          {aboutEd.story.map((paragraph, index) => (
-            <p key={index} className="text-gray-700 text-lg leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
+      <section className="max-w-5xl mx-auto px-4 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="md:col-span-2 bg-white rounded-3xl p-8 md:p-12 shadow-lg space-y-6">
+            {aboutEd.story.map((paragraph, index) => (
+              <p key={index} className="text-gray-700 text-lg leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div className="space-y-4">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/jason-chef.jpg"
+                alt="Jason Misters — Head Chef, Ed's Bangers"
+                width={400}
+                height={500}
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/jason-marathon.jpg"
+                alt="Jason running Portsmouth Half Marathon in a sausage costume"
+                width={400}
+                height={400}
+                className="w-full object-cover"
+              />
+              <p className="text-center text-xs text-gray-500 py-2 bg-white">Jason at the Portsmouth Half Marathon — all in for sausages 🌭</p>
+            </div>
+          </div>
         </div>
       </section>
 

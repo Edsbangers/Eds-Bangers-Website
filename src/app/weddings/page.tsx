@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function WeddingsPage() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,19 @@ export default function WeddingsPage() {
               Bring award-winning street food to your special day. Our gourmet bangers and sauces will have your guests talking for years!
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Wedding Photo */}
+      <section className="max-w-5xl mx-auto px-4 mb-16">
+        <div className="rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/wedding-catering.jpg"
+            alt="Ed's Bangers catering at a wedding — happy couple with our stall"
+            width={1200}
+            height={700}
+            className="w-full object-cover max-h-96"
+          />
         </div>
       </section>
 

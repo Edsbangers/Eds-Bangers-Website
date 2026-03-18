@@ -247,8 +247,8 @@ export default function Home() {
           {/* Food hero image */}
           <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/food-bangers.jpg"
-              alt="Ed's Bangers — award-winning artisan sausages"
+              src="/images/raw-sausages.jpg"
+              alt="Ed's Bangers — award-winning artisan sausages freshly made"
               width={900}
               height={600}
               className="w-full object-cover max-h-72"
@@ -261,13 +261,15 @@ export default function Home() {
                 key={banger.id}
                 className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-eds-brown flex flex-col md:flex-row items-start md:items-center gap-6 hover:translate-x-2 transition-all"
               >
-                <div
-                  className="w-20 h-20 rounded-full flex-shrink-0"
-                  style={{
-                    background: 'linear-gradient(135deg, #A0522D, #8B5A2B, #6B4423)',
-                    boxShadow: 'inset 0 -10px 20px rgba(0,0,0,0.2)',
-                  }}
-                />
+                <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
+                  <Image
+                    src="/images/raw-sausages.jpg"
+                    alt={banger.name}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-eds-charcoal mb-2">
                     {banger.name}
@@ -295,6 +297,17 @@ export default function Home() {
           <p className="text-center text-gray-400 text-lg mb-12">
             Each one a 1-Star Great Taste Award winner
           </p>
+
+          {/* Sauce photo */}
+          <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/jd-sauce-bottles.jpg"
+              alt="Ed's Bangers JD Sauce — Great Taste Award winner"
+              width={900}
+              height={500}
+              className="w-full object-cover max-h-64"
+            />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {sauces.map((sauce) => (
@@ -335,6 +348,16 @@ export default function Home() {
           <p className="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">
             Catch us serving up bangers at local festivals and food events across Hampshire and beyond!
           </p>
+
+          <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/festival-stall.jpg"
+              alt="Ed's Bangers festival stall — Giant Yorkies and Artisan Foot-Longs"
+              width={900}
+              height={500}
+              className="w-full object-cover max-h-72"
+            />
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {['Hampshire Food Festivals', 'Local Street Food Markets', 'Private Events & Catering'].map((item) => (
