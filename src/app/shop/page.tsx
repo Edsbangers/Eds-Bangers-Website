@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { bangers, sauces, sauceBundle } from '@/lib/data';
 
@@ -242,7 +243,22 @@ export default function ShopPage() {
           </span>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          {/* Bangers hero photo */}
+          <div className="relative">
+            <Image
+              src="/images/raw-sausages.jpg"
+              alt="Ed's Bangers — award-winning artisan sausages freshly made"
+              width={1200}
+              height={500}
+              className="w-full object-cover max-h-80"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+              <p className="text-white text-xl font-bold">Handcrafted in small batches. Made to order.</p>
+            </div>
+          </div>
+
+          <div className="p-8">
           <p className="text-gray-600 text-lg mb-6">
             Our award-winning sausages are made fresh to order. Available for:
           </p>
@@ -271,12 +287,15 @@ export default function ShopPage() {
                 key={banger.id}
                 className="flex items-center gap-4 p-4 bg-eds-cream/50 rounded-xl"
               >
-                <div
-                  className="w-16 h-16 rounded-full flex-shrink-0"
-                  style={{
-                    background: 'linear-gradient(135deg, #A0522D, #8B5A2B, #6B4423)',
-                  }}
-                />
+                <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden">
+                  <Image
+                    src="/images/raw-sausages.jpg"
+                    alt={banger.name}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="flex-1">
                   <h4 className="font-bold text-eds-charcoal">{banger.name}</h4>
                   <p className="text-sm text-gray-600">{banger.description}</p>
@@ -295,6 +314,7 @@ export default function ShopPage() {
             >
               Enquire About Bangers →
             </Link>
+          </div>
           </div>
         </div>
       </section>
