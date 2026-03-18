@@ -17,12 +17,14 @@ export const siteConfig = {
 export const awards = [
   { year: '2019', award: 'Runner Up', product: 'JD Banger', event: 'UK Sausage Week', icon: '🏆' },
   { year: '2019', award: 'Highly Commended', product: 'Shroom Banger', event: 'UK Sausage Week', icon: '🍄' },
+  { year: '2019', award: 'Multiple Medals', product: 'Various', event: 'Hampshire Sausage & Pie Competition', icon: '🥇' },
   { year: '2021', award: 'Highly Commended', product: 'Tashio Banger', event: 'FMT Awards', icon: '🌸' },
-  { year: '2021', award: '1 Star', product: 'Great Taste Award', event: 'Great Taste Awards', icon: '⭐' },
+  { year: '2021', award: '1 Star', product: 'JD Sauce', event: 'Great Taste Awards', icon: '⭐' },
+  { year: '2022', award: 'National Finalist', product: 'JD Sauce — Cooking Sauces', event: 'Great British Food Awards', icon: '🏅', note: 'Judged by Michelin-starred Chef Shaun Rankin' },
   { year: '2022', award: '1 Star', product: 'Great Taste Award', event: 'Great Taste Awards', icon: '⭐' },
   { year: '2022', award: 'Gold', product: 'BaNaga Banger', event: 'Hampshire Sausage & Pie Competition', icon: '🥇' },
   { year: '2023', award: 'Bronze', product: 'Mighty Tashio Banger', event: 'Great British Food Awards', icon: '🥉' },
-  { year: '2023', award: '1 Star', product: 'Chilli Paste', event: 'Great Taste Awards', icon: '🌶️' },
+  { year: '2023', award: '1 Star', product: "Ed's Hot Paste", event: 'Great Taste Awards', icon: '🌶️' },
   { year: '2023', award: '1 Star', product: 'Proper Gravy', event: 'Great Taste Awards', icon: '🥄' },
   { year: '2023', award: '1 Star', product: 'Smoked BBQ Sauce', event: 'Great Taste Awards', icon: '🔥' },
 ];
@@ -75,11 +77,10 @@ export const bangers = [
 export const sauces = [
   {
     id: 'chilli-paste',
-    name: 'Chilli Paste',
+    name: "Ed's Hot Paste",
     description: 'Fiery, complex heat with serious depth. Not for the faint-hearted.',
     longDescription: 'A rich, aromatic chilli paste with layers of heat and flavour. Perfect for marinades, stir-fries, or adding a kick to any dish. Winner of a Great Taste Award 2023.',
     award: '1-Star Great Taste Award 2023',
-    price: 5.50,
     size: '200g jar',
     available: true,
     image: '/images/chilli-paste.jpg',
@@ -93,7 +94,6 @@ export const sauces = [
     description: 'Rich, meaty, and utterly addictive. Sunday dinner sorted.',
     longDescription: 'Made with real meat juices and slow-cooked aromatics. This is gravy the way it should be - thick, glossy, and packed with flavour. Winner of a Great Taste Award 2023.',
     award: '1-Star Great Taste Award 2023',
-    price: 4.50,
     size: '300g jar',
     available: true,
     image: '/images/gravy.jpg',
@@ -107,7 +107,6 @@ export const sauces = [
     description: 'Low and slow smokiness in every drop. American soul, British heart.',
     longDescription: 'Hickory-smoked with a perfect balance of sweet, tangy, and smoky. Ideal for ribs, pulled pork, or slathering on anything from the grill. Winner of a Great Taste Award 2023.',
     award: '1-Star Great Taste Award 2023',
-    price: 5.00,
     size: '250ml bottle',
     available: true,
     image: '/images/bbq-sauce.jpg',
@@ -121,10 +120,7 @@ export const sauceBundle = {
   id: 'great-taste-bundle',
   name: 'Great Taste Bundle',
   description: 'All three award-winning sauces. The perfect gift for any food lover.',
-  includes: ['Chilli Paste 200g', 'Proper Gravy 300g', 'Smoked BBQ Sauce 250ml'],
-  individualTotal: 15.00,
-  bundlePrice: 13.50,
-  saving: 1.50,
+  includes: ["Ed's Hot Paste 200g", 'Proper Gravy 300g', 'Smoked BBQ Sauce 250ml'],
 };
 
 export interface Event {

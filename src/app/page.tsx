@@ -44,13 +44,6 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-3 mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
           >
-            <Image
-              src="/images/great-taste-producer.png"
-              alt="Great Taste Producer"
-              width={72}
-              height={72}
-              className="rounded-full shadow-lg"
-            />
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full font-bold text-sm shadow-lg">
               <span>🏆</span>
               <span>UK Sausage Week Finalist</span>
@@ -314,11 +307,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{sauce.name}</h3>
                 <p className="text-gray-400 mb-4">{sauce.description}</p>
-                {sauce.price && (
-                  <p className="text-eds-gold font-bold text-lg">
-                    £{sauce.price.toFixed(2)} <span className="text-sm text-gray-500">/ {sauce.size}</span>
-                  </p>
-                )}
+                <p className="text-gray-400 text-sm">{sauce.size}</p>
               </div>
             ))}
           </div>

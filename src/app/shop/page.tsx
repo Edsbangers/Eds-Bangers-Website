@@ -155,7 +155,6 @@ export default function ShopPage() {
         <div className="bg-gradient-to-br from-eds-charcoal to-eds-charcoal-dark rounded-2xl p-6 md:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 opacity-60">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="px-3 py-1 bg-eds-gold text-black text-sm font-bold rounded-full">Save £{sauceBundle.saving.toFixed(2)}</span>
               <span className="px-3 py-1 bg-gray-600 text-white text-sm font-bold rounded-full">Coming Soon</span>
             </div>
             <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Fredoka One", cursive' }}>
@@ -165,8 +164,6 @@ export default function ShopPage() {
             <p className="text-sm text-gray-400">{sauceBundle.includes.join(' · ')}</p>
           </div>
           <div className="text-center flex-shrink-0">
-            <p className="text-gray-400 line-through text-sm">£{sauceBundle.individualTotal.toFixed(2)}</p>
-            <p className="text-3xl font-bold text-eds-gold">£{sauceBundle.bundlePrice.toFixed(2)}</p>
             <button disabled className="mt-3 px-8 py-3 bg-gray-600 text-gray-400 font-bold rounded-full cursor-not-allowed">
               Coming Soon
             </button>
@@ -217,10 +214,7 @@ export default function ShopPage() {
                   <p><span className="font-semibold">Suitable for:</span> {sauce.suitable}</p>
                 </div>
 
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-eds-red">
-                    £{sauce.price.toFixed(2)}
-                  </span>
+                <div className="flex items-center justify-end mt-auto">
                   <button
                     disabled
                     className="px-6 py-3 bg-gray-300 text-gray-500 font-bold rounded-full cursor-not-allowed text-sm"
