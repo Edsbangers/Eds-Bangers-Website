@@ -327,20 +327,22 @@ export const blogPosts: BlogPost[] = [
   {
     id: '3',
     slug: 'shed-sauce-production',
-    title: 'Exciting News: Sauce Production Is Coming Back!',
-    excerpt: 'After an 18-month gap while we moved and rebuilt our production setup, we\'re planning to fire up the shed again — starting with our award-winning sauces. Expected late summer 2026.',
+    title: 'The Bangers and Sauces Are Coming Back!',
+    excerpt: 'Some of you have been asking — where have the bangers gone? After an 18-month gap to rebuild our production setup, we\'re planning a return. Sauces first, then small-batch bangers for our loyal fans. Expected late summer 2026.',
     content: `
-      <p>This one's been a long time coming, and we're genuinely excited to finally share it: Ed's Bangers is in the planning stages of restarting sauce production after an 18-month break.</p>
+      <p>This one's been a long time coming, and we're genuinely excited to finally share it: Ed's Bangers is in the planning stages of getting back into production after an 18-month break.</p>
 
       <p>Life throws curveballs — in our case, it meant relocating our entire production setup. Moving premises, working through the planning process, FSA registrations, fitting everything out to the right standards — none of it is quick, and none of it is cheap. But we've done it right, and we're incredibly proud of what's being built.</p>
 
-      <h2>Why the Gap?</h2>
+      <h2>Where Have the Bangers Gone?</h2>
 
-      <p>We know some of you have been asking where the sauces went. The honest answer: we moved production, and doing it properly takes time. We refused to cut corners on food safety, quality, or process — so rather than rush it, we paused. The 18-month gap has been frustrating for us too, but the setup we're building is worth the wait.</p>
+      <p>We know — some of you have been asking. Where are the bangers? Where are the sauces? The honest answer: we moved production, and doing it properly takes time. We refused to cut corners on food safety, quality, or process — so rather than rush it, we paused. The 18-month gap has been frustrating for us too, but the setup we're building is worth the wait.</p>
 
-      <h2>What's Coming</h2>
+      <p>The loyalty and messages from our regulars genuinely means the world to us. You haven't been forgotten — and neither have your bangers.</p>
 
-      <p>We're planning to start with our three Great Taste Award-winning sauces:</p>
+      <h2>The Plan — Sauces First</h2>
+
+      <p>We're starting small and doing it right. First up will be our three Great Taste Award-winning sauces:</p>
 
       <ul>
         <li><strong>Ed's Hot Paste</strong> — fiery, complex, and deeply aromatic. The one that divides the room (in the best way).</li>
@@ -350,9 +352,15 @@ export const blogPosts: BlogPost[] = [
 
       <p>All three carry Great Taste stars, and all three will be made in small batches to maintain the quality you know and love. No shortcuts — ever.</p>
 
+      <h2>Then the Bangers</h2>
+
+      <p>Once the sauce side is up and running, the bangers are next. We'll be bringing them back in small batches initially — for our original loyal fans first. The people who queued at the market stall, who turned up at Victorious, who've been sliding into our DMs asking when they're coming back. You'll be first.</p>
+
+      <p>We'll scale up when it's right to do so — not before. Quality over quantity, always.</p>
+
       <h2>When?</h2>
 
-      <p>We're targeting <strong>late summer 2026</strong> to have the shed up and running and our first batch of sauces ready to go. That's the goal we're working towards. We'll be sharing updates on Instagram and Facebook as things progress — follow us there to be first to know when we're ready to take orders.</p>
+      <p>We're targeting <strong>late summer 2026</strong> to have the shed up and running and our first sauces ready to go. Follow us on Instagram and Facebook for updates as things progress — you'll be first to know when we're ready to take orders.</p>
 
       <p>Questions about wholesale or stockist enquiries? Get in touch early — edsbangers@gmail.com. We'd love to hear from you.</p>
     `,
