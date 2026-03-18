@@ -265,20 +265,24 @@ export default function ContactPage() {
         <div className="space-y-4">
           {[
             {
-              q: 'Do you deliver nationwide?',
-              a: 'We currently deliver our sauces within the UK. For international orders, please get in touch and we\'ll see what we can do!'
+              q: 'When will the sauces be available to buy?',
+              a: 'We\'re working on it! After an 18-month gap while we relocated and rebuilt our production setup, we\'re targeting late summer 2026 to have our award-winning sauces back on sale. We\'ll be starting small — short runs, high quality — exactly as before. Follow us on Instagram and Facebook to be first to know when we\'re ready to take orders.'
             },
             {
-              q: 'Can I buy your sausages?',
-              a: 'Our bangers are made fresh to order for events and wholesale customers. Catch us at a festival or market, or get in touch about wholesale orders.'
+              q: 'Where have the bangers gone?',
+              a: 'We hear you — and we miss them too! The bangers are coming back, but sauces will come first as we get the shed production up and running again. Once sauces are flowing, we\'ll be bringing the bangers back in small batches for our original loyal fans. Bear with us — it\'ll be worth the wait.'
+            },
+            {
+              q: 'Can I still book Ed\'s Bangers for an event or wedding?',
+              a: 'Absolutely — event and wedding catering is very much open! Get in touch via the form above or head to our Weddings & Events page to send an enquiry. We cater across Hampshire and beyond.'
             },
             {
               q: 'How far in advance should I book for an event?',
-              a: 'We recommend booking at least 4-6 weeks in advance for weddings, and 2-3 weeks for smaller events. Popular dates book up quickly!'
+              a: 'We recommend booking at least 4–6 weeks in advance for weddings, and 2–3 weeks for smaller events. Popular dates book up quickly!'
             },
             {
               q: 'Are your products suitable for vegetarians?',
-              a: 'While our sausages contain meat, some of our sauces are vegetarian-friendly. Check individual product descriptions or ask us for details.'
+              a: 'While our sausages contain meat, some of our sauces are vegetarian-friendly. Check individual product descriptions or drop us a message for details.'
             },
           ].map((faq, i) => (
             <div key={i} className="bg-white rounded-xl p-6 shadow-lg">
