@@ -327,30 +327,34 @@ export const blogPosts: BlogPost[] = [
   {
     id: '3',
     slug: 'shed-sauce-production',
-    title: 'Big News: We\'re Scaling Up Sauce Production',
-    excerpt: 'With a newly converted production shed and our three Great Taste sauces ready to go, we\'re opening up online orders.',
+    title: 'Exciting News: Sauce Production Is Coming Back!',
+    excerpt: 'After an 18-month gap while we moved and rebuilt our production setup, we\'re planning to fire up the shed again — starting with our award-winning sauces. Expected late summer 2026.',
     content: `
-      <p>We've been building towards this for a while, and we're finally ready to share the news: Ed's Bangers is scaling up sauce production from our new dedicated food production facility.</p>
+      <p>This one's been a long time coming, and we're genuinely excited to finally share it: Ed's Bangers is in the planning stages of restarting sauce production after an 18-month break.</p>
 
-      <p>It's been a journey getting here. Planning permissions, Food Standards Agency registrations, fitting out the space to FSA standards — none of it is quick. But it's done right, and we're incredibly proud of the setup we've built.</p>
+      <p>Life throws curveballs — in our case, it meant relocating our entire production setup. Moving premises, working through the planning process, FSA registrations, fitting everything out to the right standards — none of it is quick, and none of it is cheap. But we've done it right, and we're incredibly proud of what's being built.</p>
 
-      <h2>The Three Sauces</h2>
+      <h2>Why the Gap?</h2>
 
-      <p>Our three Great Taste Award-winning sauces are now available for order online and through a growing number of local stockists:</p>
+      <p>We know some of you have been asking where the sauces went. The honest answer: we moved production, and doing it properly takes time. We refused to cut corners on food safety, quality, or process — so rather than rush it, we paused. The 18-month gap has been frustrating for us too, but the setup we're building is worth the wait.</p>
+
+      <h2>What's Coming</h2>
+
+      <p>We're planning to start with our three Great Taste Award-winning sauces:</p>
 
       <ul>
-        <li><strong>Chilli Paste</strong> — fiery, complex, and deeply aromatic. The one that divides the room (in the best way).</li>
+        <li><strong>Ed's Hot Paste</strong> — fiery, complex, and deeply aromatic. The one that divides the room (in the best way).</li>
         <li><strong>Proper Gravy</strong> — thick, glossy, made with real meat juices. Sunday dinner has never been easier.</li>
         <li><strong>Smoked BBQ Sauce</strong> — low-and-slow smokiness, sweet and tangy. American soul with a British heart.</li>
       </ul>
 
-      <p>All three carry the Great Taste star, and all three are made in small batches to maintain quality. No shortcuts.</p>
+      <p>All three carry Great Taste stars, and all three will be made in small batches to maintain the quality you know and love. No shortcuts — ever.</p>
 
-      <h2>Where to Buy</h2>
+      <h2>When?</h2>
 
-      <p>You can order directly through our website — click Shop at the top — or catch us at Barn Farm Community Centre on the second Friday of every month. We're also working on getting into local delis and farm shops across Hampshire. Watch this space.</p>
+      <p>We're targeting <strong>late summer 2026</strong> to have the shed up and running and our first batch of sauces ready to go. That's the goal we're working towards. We'll be sharing updates on Instagram and Facebook as things progress — follow us there to be first to know when we're ready to take orders.</p>
 
-      <p>Questions about wholesale? Drop us an email at edsbangers@gmail.com.</p>
+      <p>Questions about wholesale or stockist enquiries? Get in touch early — edsbangers@gmail.com. We'd love to hear from you.</p>
     `,
     date: '2026-03-01',
     author: 'Jason',

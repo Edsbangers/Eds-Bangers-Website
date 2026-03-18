@@ -150,6 +150,94 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Press & Awards Section */}
+      <section className="max-w-5xl mx-auto px-4 mb-20">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-eds-charcoal text-center mb-4"
+          style={{ fontFamily: '"Fredoka One", cursive' }}
+        >
+          📰 Press & Recognition
+        </h2>
+        <p className="text-center text-gray-600 mb-12">
+          Ed&apos;s Bangers in the news and in the trophy cabinet
+        </p>
+
+        {/* Certificate photos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/hampshire-sp-2022-certs.jpg"
+              alt="Hampshire Sausage & Pie Competition 2022 — Gold, Silver and Bronze certificates for Ed's Bangers"
+              width={600}
+              height={450}
+              className="w-full object-cover"
+            />
+            <div className="p-4">
+              <p className="font-bold text-eds-charcoal">Hampshire Sausage & Pie Competition 2022</p>
+              <p className="text-sm text-gray-600">Gold (BaNaga Banger) · Silver (Plain Banger) · Bronze (Chickabrie Banger)</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/fmt-2021-certificate.jpg"
+              alt="Food Management Today Industry Awards 2021 — Highly Commended, Tashio Banger, Best Red Meat Product"
+              width={600}
+              height={450}
+              className="w-full object-cover"
+            />
+            <div className="p-4">
+              <p className="font-bold text-eds-charcoal">Food Management Today Industry Awards 2021</p>
+              <p className="text-sm text-gray-600">Highly Commended — Best Red Meat Product (Tashio Banger)</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/portsmouth-news.jpg"
+              alt="The Portsmouth News — Meet the sausage-making soldier with his new Portsmouth stall"
+              width={600}
+              height={450}
+              className="w-full object-cover"
+            />
+            <div className="p-4">
+              <p className="font-bold text-eds-charcoal">The Portsmouth News</p>
+              <p className="text-sm text-gray-600">&ldquo;Meet the sausage-making soldier with his new Portsmouth stall&rdquo;</p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/jd-sauce-bottles.jpg"
+              alt="JD Sauce — Great Taste Award winner"
+              width={600}
+              height={450}
+              className="w-full object-cover"
+            />
+            <div className="p-4">
+              <p className="font-bold text-eds-charcoal">Great Taste Awards — JD Sauce</p>
+              <p className="text-sm text-gray-600">1-Star Great Taste Award winner · Great British Food Awards National Finalist 2022</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Press mentions strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { title: 'The Portsmouth News', detail: 'Feature: "The sausage-making soldier"', icon: '📰' },
+            { title: 'Strong Island Magazine', detail: 'Victorious Festival VIP review', icon: '🎪' },
+            { title: 'Food Management Today', detail: 'Industry Awards 2021 Highly Commended', icon: '🏅' },
+            { title: 'Guild of Fine Food', detail: 'Official Great Taste Producer Directory', icon: '⭐' },
+          ].map((item) => (
+            <div key={item.title} className="bg-white rounded-xl p-5 shadow-lg text-center">
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <p className="font-bold text-eds-charcoal text-sm mb-1">{item.title}</p>
+              <p className="text-gray-500 text-xs">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="max-w-4xl mx-auto px-4">
         <div className="bg-eds-red rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl">
