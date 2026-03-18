@@ -4,8 +4,15 @@ import Link from 'next/link';
 import { aboutEd, awards } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "About Ed's Bangers® | The Story Behind the Sausages",
-  description: "From the British Army to the Sausage Shed — the story of Jason Misters and Ed's Bangers. Great Taste Producer, UK Sausage Week finalist, and multiple award winner.",
+  title: "About — From the British Army to the Sausage Shed",
+  description: "Meet Jason Misters — from the British Army to award-winning artisan sausages. Great Taste Producer, UK Sausage Week finalist, Hampshire's most decorated sausage maker.",
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: "About Ed's Bangers® | The Story Behind the Sausages",
+    description: "Meet Jason Misters — from the British Army to award-winning artisan sausages. Great Taste Producer and UK Sausage Week finalist based in Hampshire.",
+    url: 'https://www.edsbangers.com/about',
+    images: [{ url: '/images/jason-chef.jpg', alt: "Jason Misters — Head Chef, Ed's Bangers" }],
+  },
 };
 
 export default function AboutPage() {

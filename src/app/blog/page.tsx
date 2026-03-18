@@ -3,8 +3,15 @@ import Link from 'next/link';
 import { blogPosts } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: "Blog | Ed's Bangers® — News, Recipes & Stories",
-  description: "News, recipes, behind-the-scenes, and stories from the world of Ed's Bangers. Award-winning artisan sausages and sauces from Hampshire.",
+  title: "Blog — Food Stories, News & Production Updates",
+  description: "Behind-the-scenes stories, food news and production updates from Ed's Bangers — award-winning artisan sausage makers from Hampshire.",
+  alternates: { canonical: '/blog' },
+  openGraph: {
+    title: "Blog | Ed's Bangers® — Food Stories & News",
+    description: "Behind-the-scenes stories, food news and production updates from Ed's Bangers — award-winning artisan sausage makers from Hampshire.",
+    url: 'https://www.edsbangers.com/blog',
+    images: [{ url: '/images/raw-sausages.jpg', alt: "Ed's Bangers award-winning artisan sausages" }],
+  },
 };
 
 export default function BlogPage() {
