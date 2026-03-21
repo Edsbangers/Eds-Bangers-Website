@@ -5,13 +5,46 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = 'edsbangers@gmail.com';
 const FROM_EMAIL = process.env.FROM_EMAIL || 'noreply@edsbangers.com';
 
+// Rate limiter: 5 requests per IP per hour
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + 3600000 });
+    return false;
+  }
+  entry.count++;
+  return entry.count > 5;
+}
+
+// Sanitise HTML to prevent XSS
+function sanitise(str: string): string {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    if (isRateLimited(ip)) {
+      return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+    }
+
     const body = await request.json();
     const { type, ...data } = body;
 
     if (!type) {
       return NextResponse.json({ error: 'Missing email type' }, { status: 400 });
+    }
+
+    // Email validation
+    if (data.email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(data.email)) {
+        return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
+      }
     }
 
     let subject = '';
@@ -22,13 +55,13 @@ export async function POST(request: NextRequest) {
       if (!name || !email || !message) {
         return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
       }
-      subject = `Contact Form: ${msgSubject || 'General Enquiry'} — from ${name}`;
+      subject = `Contact Form: ${sanitise(msgSubject || 'General Enquiry')} — from ${sanitise(name)}`;
       html = `
         <h2>New Contact Form Message</h2>
-        <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
-        <p><strong>Subject:</strong> ${msgSubject}</p>
+        <p><strong>From:</strong> ${sanitise(name)} &lt;${sanitise(email)}&gt;</p>
+        <p><strong>Subject:</strong> ${sanitise(msgSubject)}</p>
         <hr />
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${sanitise(message).replace(/\n/g, '<br>')}</p>
         <hr />
         <p style="color:#888;font-size:12px;">Sent from edsbangers.com contact form</p>
       `;
