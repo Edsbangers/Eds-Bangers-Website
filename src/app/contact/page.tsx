@@ -277,10 +277,6 @@ export default function ContactPage() {
               a: 'Absolutely — event and wedding catering is very much open! Get in touch via the form above or head to our Weddings & Events page to send an enquiry. We cater across Hampshire and beyond.'
             },
             {
-              q: 'How far in advance should I book for an event?',
-              a: 'We recommend booking at least 4–6 weeks in advance for weddings, and 2–3 weeks for smaller events. Popular dates book up quickly!'
-            },
-            {
               q: 'Are your products suitable for vegetarians?',
               a: 'While our sausages contain meat, some of our sauces are vegetarian-friendly. Check individual product descriptions or drop us a message for details.'
             },
