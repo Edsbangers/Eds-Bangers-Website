@@ -368,6 +368,53 @@ export const blogPosts: BlogPost[] = [
     author: 'Jason',
     tags: ['news', 'sauces', 'production'],
   },
+  {
+    id: '5',
+    slug: 'new-food-production-prep-area-2026',
+    title: 'Construction Starts on Our New Food Production Prep Area!',
+    excerpt: 'Hugely exciting news — work has officially begun on our dedicated food production preparation area, aiming for completion by August 2026.',
+    content: `
+      <h2>It's Happening!</h2>
+
+      <p>We can barely contain our excitement — <strong>construction has officially begun on our brand new, dedicated food production preparation area</strong>. This is genuinely one of the biggest milestones in Ed's Bangers history, and we couldn't wait to share it with you.</p>
+
+      <p>For years, we've been crafting our award-winning sausages and sauces from smaller kitchen-based setups. And while that scrappy, hands-on approach is part of our story, we've always dreamed of having a proper commercial facility — a space built from the ground up to handle the demand and quality standards that Ed's Bangers deserves.</p>
+
+      <h2>What's Being Built?</h2>
+
+      <p>The new prep area will be a dedicated food production facility designed to:</p>
+
+      <ul>
+        <li><strong>Scale our production</strong> — meet growing demand from customers, events, and retail</li>
+        <li><strong>Meet food safety standards</strong> — built ready for certification and inspection</li>
+        <li><strong>Prepare for wholesale and retail supply</strong> — delis, farm shops, and independent retailers</li>
+        <li><strong>Give us room to experiment</strong> — new flavours, seasonal specials, limited editions</li>
+      </ul>
+
+      <h2>When Will It Be Ready?</h2>
+
+      <p>We're <strong>aiming for completion by August 2026</strong> — just in time for the autumn festival and events season. That means Victorious Festival, Christmas markets, and everything in between with proper production capacity behind us.</p>
+
+      <h2>A Dream Becoming Reality</h2>
+
+      <p>When Ed's Bangers started, it was a passion project — a love of great food, proper ingredients, and feeding people something genuinely good. From market stalls to festival stages to Great Taste Producer status, every step has been fuelled by the support of our incredible community.</p>
+
+      <p>This new facility is the next chapter. It means more bangers, more sauces, and more of what you love — without compromising on the quality that earned us those Great Taste stars.</p>
+
+      <h2>Thank You</h2>
+
+      <p>To everyone who has queued at our stall, ordered online, told a friend, or sent us a message saying how much they love our sausages — <strong>thank you</strong>. This wouldn't be happening without you.</p>
+
+      <p>We'll be sharing updates as construction progresses — follow along on <a href="https://www.instagram.com/edsbangers" target="_blank">Instagram @edsbangers</a> for behind-the-scenes photos and progress reports. It's going to be a brilliant summer.</p>
+
+      <p>Questions about wholesale, stockist enquiries, or events? Get in touch — <a href="mailto:edsbangers@gmail.com">edsbangers@gmail.com</a>. We'd love to hear from you.</p>
+
+      <p>Here we go! 🌭</p>
+    `,
+    date: '2026-03-23',
+    author: 'Jason',
+    tags: ['news', 'production', 'facility', 'growth'],
+  },
 ];
 
 export const weddingPackages = [
