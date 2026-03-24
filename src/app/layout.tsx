@@ -105,12 +105,22 @@ const localBusinessSchema = {
   "email": "edsbangers@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Hampshire",
+    "addressLocality": "Portsmouth",
     "addressRegion": "Hampshire",
+    "postalCode": "PO4",
     "addressCountry": "GB",
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.7989,
+    "longitude": -1.0745,
+  },
   "areaServed": [
-    { "@type": "State", "name": "Hampshire" },
+    { "@type": "City", "name": "Portsmouth" },
+    { "@type": "City", "name": "Southampton" },
+    { "@type": "City", "name": "Fareham" },
+    { "@type": "City", "name": "Gosport" },
+    { "@type": "AdministrativeArea", "name": "Hampshire" },
     { "@type": "Country", "name": "United Kingdom" },
   ],
   "servesCuisine": ["British", "Street Food", "Artisan Sausages"],
@@ -135,6 +145,59 @@ const localBusinessSchema = {
   ],
 };
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Ed's Bangers Great Taste Award-Winning Sauces",
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "position": 1,
+      "name": "Ed's Hot Paste",
+      "description": "Fiery chilli paste with depth. Great Taste 1-Star 2023. Vegan-friendly. 200g jar.",
+      "brand": { "@type": "Brand", "name": "Ed's Bangers" },
+      "image": "https://www.edsbangers.com/images/jd-sauce-bottles.jpg",
+      "award": "Great Taste 1-Star 2023",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/PreOrder",
+        "seller": { "@type": "Organization", "name": "Ed's Bangers" },
+      },
+    },
+    {
+      "@type": "Product",
+      "position": 2,
+      "name": "Ed's Proper Gravy",
+      "description": "Rich, meaty gravy with real depth. Great Taste 1-Star 2023. Gluten-free option. 300g jar.",
+      "brand": { "@type": "Brand", "name": "Ed's Bangers" },
+      "image": "https://www.edsbangers.com/images/jd-sauce-bottles.jpg",
+      "award": "Great Taste 1-Star 2023",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/PreOrder",
+        "seller": { "@type": "Organization", "name": "Ed's Bangers" },
+      },
+    },
+    {
+      "@type": "Product",
+      "position": 3,
+      "name": "Ed's Smoked BBQ Sauce",
+      "description": "Smoky, tangy BBQ sauce. Great Taste 1-Star 2023. Vegetarian. 250ml bottle.",
+      "brand": { "@type": "Brand", "name": "Ed's Bangers" },
+      "image": "https://www.edsbangers.com/images/jd-sauce-bottles.jpg",
+      "award": "Great Taste 1-Star 2023",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "availability": "https://schema.org/PreOrder",
+        "seller": { "@type": "Organization", "name": "Ed's Bangers" },
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -156,6 +219,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
       </head>
       <body className="antialiased">

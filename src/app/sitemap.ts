@@ -12,12 +12,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/events`,   priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${base}/blog`,     priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${base}/contact`,  priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: `${base}/privacy`,  priority: 0.3, changeFrequency: 'yearly' as const },
+    { url: `${base}/terms`,    priority: 0.3, changeFrequency: 'yearly' as const },
   ];
 
   const blogPages = blogPosts.map((post) => ({
     url: `${base}/blog/${post.slug}`,
     priority: 0.6,
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'weekly' as const,
     lastModified: new Date(post.date),
   }));
 

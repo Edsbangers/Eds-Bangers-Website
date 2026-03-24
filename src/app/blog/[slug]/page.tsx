@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/data';
@@ -12,6 +13,24 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
+  if (!post) return { title: "Post Not Found" };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `https://www.edsbangers.com/blog/${post.slug}`,
+      siteName: "Ed's Bangers",
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -19,6 +38,23 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     notFound();
   }
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": { "@type": "Person", "name": "Jason Misters" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ed's Bangers",
+      "url": "https://www.edsbangers.com",
+      "logo": "https://www.edsbangers.com/images/logo.png",
+    },
+    "mainEntityOfPage": `https://www.edsbangers.com/blog/${post.slug}`,
+    "keywords": post.tags.join(", "),
+  };
 
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
@@ -31,6 +67,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-eds-cream pt-24 pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <article className="max-w-3xl mx-auto px-4">
         {/* Back Link */}
         <Link
