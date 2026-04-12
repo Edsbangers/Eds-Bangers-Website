@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
-  title: "Shop — Award-Winning Sauces & Artisan Bangers",
+  title: "Shop — Award-Winning Sauces & Bangers",
   description: "Great Taste award-winning sauces from Ed's Bangers — Ed's Hot Paste, Proper Gravy & Smoked BBQ Sauce. Handcrafted in Hampshire. Online ordering coming late summer 2026.",
   alternates: { canonical: '/shop' },
   openGraph: {
@@ -13,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function ShopLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <><BreadcrumbJsonLd crumbs={[{ name: 'Shop', path: '/shop' }]} />{children}</>;
 }

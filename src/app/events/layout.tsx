@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: "Events — Find Ed's Bangers Near You",
@@ -13,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function EventsLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <><BreadcrumbJsonLd crumbs={[{ name: 'Events', path: '/events' }]} />{children}</>;
 }

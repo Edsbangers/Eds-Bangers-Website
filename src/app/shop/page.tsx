@@ -251,6 +251,7 @@ export default function ShopPage() {
               alt="Ed's Bangers — award-winning artisan sausages freshly made"
               width={1200}
               height={500}
+              sizes="(max-width: 1280px) 100vw, 1200px"
               className="w-full object-cover max-h-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">

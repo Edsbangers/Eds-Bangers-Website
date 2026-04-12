@@ -72,6 +72,14 @@ const organizationSchema = {
   "founder": {
     "@type": "Person",
     "name": "Jason Misters",
+    "jobTitle": "Founder & Head Chef",
+    "worksFor": { "@type": "Organization", "name": "Ed's Bangers" },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "British Army Service / Food Production Expertise",
+      },
+    ],
   },
   "contactPoint": {
     "@type": "ContactPoint",
@@ -83,7 +91,10 @@ const organizationSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Hampshire",
+    "streetAddress": "13 Chitty Road",
+    "addressLocality": "Southsea",
+    "addressRegion": "Hampshire",
+    "postalCode": "PO4 9MX",
     "addressCountry": "GB",
   },
   "sameAs": [
@@ -105,11 +116,19 @@ const localBusinessSchema = {
   "email": "edsbangers@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Portsmouth",
+    "streetAddress": "13 Chitty Road",
+    "addressLocality": "Southsea",
     "addressRegion": "Hampshire",
-    "postalCode": "PO4",
+    "postalCode": "PO4 9MX",
     "addressCountry": "GB",
   },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "description": "By appointment only",
+    },
+  ],
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 50.7989,

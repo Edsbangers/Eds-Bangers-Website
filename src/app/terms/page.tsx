@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Ed's Bangers®",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-eds-cream pt-24 pb-16">
+      <BreadcrumbJsonLd crumbs={[{ name: 'Terms & Conditions', path: '/terms' }]} />
       <div className="max-w-3xl mx-auto px-4">
         <h1
           className="text-4xl font-bold text-eds-charcoal mb-2"

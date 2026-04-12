@@ -20,6 +20,7 @@ export default function Home() {
         />
 
         <div className="relative z-10 max-w-4xl mx-auto">
+          <h1 className="sr-only">Ed&apos;s Bangers® — Award-Winning Artisan Sausages &amp; Sauces, Handcrafted in Hampshire</h1>
           {/* Logo */}
           <div className="mb-6 animate-fade-in-up">
             <Image
@@ -251,6 +252,7 @@ export default function Home() {
               alt="Ed's Bangers — award-winning artisan sausages freshly made"
               width={900}
               height={600}
+              sizes="(max-width: 1024px) 100vw, 900px"
               className="w-full object-cover max-h-72"
             />
           </div>
@@ -305,6 +307,7 @@ export default function Home() {
               alt="Ed's Bangers JD Sauce — Great Taste Award winner"
               width={900}
               height={500}
+              sizes="(max-width: 1024px) 100vw, 900px"
               className="w-full object-cover max-h-64"
             />
           </div>
@@ -355,6 +358,7 @@ export default function Home() {
               alt="Ed's Bangers festival stall — Giant Yorkies and Artisan Foot-Longs"
               width={900}
               height={500}
+              sizes="(max-width: 1024px) 100vw, 900px"
               className="w-full object-cover max-h-72"
             />
           </div>

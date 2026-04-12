@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { aboutEd, awards } from '@/lib/data';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
-  title: "About — From the British Army to the Sausage Shed",
+  title: "About — Army to Award-Winning Bangers",
   description: "Meet Jason Misters — from the British Army to award-winning artisan sausages. Great Taste Producer, UK Sausage Week finalist, Hampshire's most decorated sausage maker.",
   alternates: { canonical: '/about' },
   openGraph: {
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-eds-cream pt-24 pb-16">
+      <BreadcrumbJsonLd crumbs={[{ name: 'About', path: '/about' }]} />
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 mb-16 text-center">
@@ -52,6 +54,7 @@ export default function AboutPage() {
                 alt="Jason Misters — Head Chef, Ed's Bangers"
                 width={400}
                 height={500}
+                sizes="(max-width: 768px) 100vw, 400px"
                 className="w-full object-cover"
               />
             </div>
@@ -61,6 +64,7 @@ export default function AboutPage() {
                 alt="Jason running Portsmouth Half Marathon in a sausage costume"
                 width={400}
                 height={400}
+                sizes="(max-width: 768px) 100vw, 400px"
                 className="w-full object-cover"
               />
               <p className="text-center text-xs text-gray-500 py-2 bg-white">Jason at the Portsmouth Half Marathon — all in for sausages 🌭</p>
@@ -177,6 +181,7 @@ export default function AboutPage() {
               alt="Hampshire Sausage & Pie Competition 2022 — Gold, Silver and Bronze certificates for Ed's Bangers"
               width={600}
               height={450}
+              sizes="(max-width: 768px) 100vw, 600px"
               className="w-full object-cover"
             />
             <div className="p-4">
@@ -191,6 +196,7 @@ export default function AboutPage() {
               alt="Food Management Today Industry Awards 2021 — Highly Commended, Tashio Banger, Best Red Meat Product"
               width={600}
               height={450}
+              sizes="(max-width: 768px) 100vw, 600px"
               className="w-full object-cover"
             />
             <div className="p-4">
@@ -205,6 +211,7 @@ export default function AboutPage() {
               alt="The Portsmouth News — Meet the sausage-making soldier with his new Portsmouth stall"
               width={600}
               height={450}
+              sizes="(max-width: 768px) 100vw, 600px"
               className="w-full object-cover"
             />
             <div className="p-4">
@@ -219,6 +226,7 @@ export default function AboutPage() {
               alt="JD Sauce — Great Taste Award winner"
               width={600}
               height={450}
+              sizes="(max-width: 768px) 100vw, 600px"
               className="w-full object-cover"
             />
             <div className="p-4">

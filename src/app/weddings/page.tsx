@@ -76,6 +76,7 @@ export default function WeddingsPage() {
             alt="Ed's Bangers catering at a wedding — happy couple with our stall"
             width={1200}
             height={700}
+            sizes="(max-width: 1280px) 100vw, 1200px"
             className="w-full object-cover max-h-96"
           />
         </div>

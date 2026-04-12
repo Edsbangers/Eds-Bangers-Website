@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
-  title: "Contact — Catering, Wholesale & General Enquiries",
+  title: "Contact — Catering & Wholesale Enquiries",
   description: "Get in touch with Ed's Bangers. Wedding catering, event bookings, wholesale sauce enquiries, or just say hello. Based in Hampshire, serving the UK.",
   alternates: { canonical: '/contact' },
   openGraph: {
@@ -58,6 +59,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <BreadcrumbJsonLd crumbs={[{ name: 'Contact', path: '/contact' }]} />
       {children}
     </>
   );

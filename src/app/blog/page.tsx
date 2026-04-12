@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { blogPosts } from '@/lib/data';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata: Metadata = {
-  title: "Blog — Food Stories, News & Production Updates",
+  title: "Blog — Food Stories & News",
   description: "Behind-the-scenes stories, food news and production updates from Ed's Bangers — award-winning artisan sausage makers from Hampshire.",
   alternates: { canonical: '/blog' },
   openGraph: {
@@ -26,6 +27,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-eds-cream pt-24 pb-16">
+      <BreadcrumbJsonLd crumbs={[{ name: 'Blog', path: '/blog' }]} />
       {/* Header */}
       <div className="max-w-4xl mx-auto px-4 mb-12">
         <h1

@@ -39,12 +39,21 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const wordCount = post.content.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
+  const imageUrl = `https://www.edsbangers.com${post.image ?? '/images/raw-sausages.jpg'}`;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
     "datePublished": post.date,
+    "dateModified": post.date,
+    "image": {
+      "@type": "ImageObject",
+      "url": imageUrl,
+    },
+    "wordCount": wordCount,
     "author": { "@type": "Person", "name": "Jason Misters" },
     "publisher": {
       "@type": "Organization",
@@ -54,6 +63,16 @@ export default async function BlogPostPage({ params }: PageProps) {
     },
     "mainEntityOfPage": `https://www.edsbangers.com/blog/${post.slug}`,
     "keywords": post.tags.join(", "),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.edsbangers.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.edsbangers.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.edsbangers.com/blog/${post.slug}` },
+    ],
   };
 
   const formatDate = (dateStr: string) => {
@@ -70,6 +89,10 @@ export default async function BlogPostPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <article className="max-w-3xl mx-auto px-4">
         {/* Back Link */}
