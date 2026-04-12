@@ -118,7 +118,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {/* Title */}
         <h1
           className="text-3xl md:text-4xl font-bold text-eds-charcoal mb-6"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           {post.title}
         </h1>
@@ -171,7 +171,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="mt-12 bg-eds-red rounded-2xl p-8 text-white text-center">
           <h3
             className="text-2xl font-bold mb-3"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Hungry for more?
           </h3>

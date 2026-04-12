@@ -44,7 +44,7 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto px-4 mb-12">
         <h1
           className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           📧 Get in Touch
         </h1>
@@ -257,7 +257,7 @@ export default function ContactPage() {
       <section className="max-w-4xl mx-auto px-4 mt-16">
         <h2
           className="text-2xl font-bold text-eds-charcoal text-center mb-8"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           ❓ Frequently Asked Questions
         </h2>

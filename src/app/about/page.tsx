@@ -28,7 +28,7 @@ export default function AboutPage() {
         </div>
         <h1
           className="text-4xl md:text-6xl font-bold text-eds-charcoal mb-6"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           {aboutEd.headline}
         </h1>
@@ -78,7 +78,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <h2
             className="text-3xl md:text-4xl font-bold text-white text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Our Credentials
           </h2>
@@ -114,7 +114,7 @@ export default function AboutPage() {
       <section className="max-w-4xl mx-auto px-4 mb-20">
         <h2
           className="text-3xl md:text-4xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           🏆 Awards Timeline
         </h2>
@@ -165,7 +165,7 @@ export default function AboutPage() {
       <section className="max-w-5xl mx-auto px-4 mb-20">
         <h2
           className="text-3xl md:text-4xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           📰 Press & Recognition
         </h2>
@@ -258,7 +258,7 @@ export default function AboutPage() {
         <div className="bg-eds-red rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl">
           <h2
             className="text-2xl md:text-3xl font-bold mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Taste the Story
           </h2>

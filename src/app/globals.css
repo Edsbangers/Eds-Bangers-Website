@@ -29,8 +29,6 @@
   --color-eds-charcoal: #2D2A26;
   --color-eds-charcoal-dark: #1a1816;
   
-  --font-display: "Fredoka One", cursive;
-  --font-body: "Nunito", sans-serif;
 }
 
 html {
@@ -40,7 +38,7 @@ html {
 body {
   background: var(--eds-cream);
   color: var(--eds-charcoal);
-  font-family: "Nunito", "Segoe UI", sans-serif;
+  font-family: var(--font-body), "Segoe UI", sans-serif;
 }
 
 /* Custom Scrollbar */

@@ -14,7 +14,7 @@ export default function Footer() {
             <h3
               className="text-2xl font-bold mb-4"
               style={{
-                fontFamily: '"Fredoka One", cursive',
+                fontFamily: 'var(--font-display), cursive',
                 color: '#C41E3A',
               }}
             >

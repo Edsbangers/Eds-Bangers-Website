@@ -110,7 +110,7 @@ export default function ShopPage() {
       <div className="max-w-6xl mx-auto px-4 mb-12">
         <h1
           className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           🛒 Shop
         </h1>
@@ -123,7 +123,7 @@ export default function ShopPage() {
       <section className="max-w-6xl mx-auto px-4 mb-10">
         <div className="bg-gradient-to-br from-eds-charcoal to-eds-charcoal-dark rounded-2xl p-6 md:p-8 text-white text-center">
           <div className="text-4xl mb-3">🚧</div>
-          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Fredoka One", cursive' }}>
+          <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'var(--font-display), cursive' }}>
             Online Shop Coming Soon!
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto mb-4">
@@ -158,7 +158,7 @@ export default function ShopPage() {
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 bg-gray-600 text-white text-sm font-bold rounded-full">Coming Soon</span>
             </div>
-            <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: '"Fredoka One", cursive' }}>
+            <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'var(--font-display), cursive' }}>
               🎁 {sauceBundle.name}
             </h2>
             <p className="text-gray-300 mb-2">{sauceBundle.description}</p>
@@ -177,7 +177,7 @@ export default function ShopPage() {
         <div className="flex items-center gap-4 mb-8">
           <h2
             className="text-3xl font-bold text-eds-charcoal"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             🔥 Great Taste Sauces
           </h2>
@@ -234,7 +234,7 @@ export default function ShopPage() {
         <div className="flex items-center gap-4 mb-8">
           <h2
             className="text-3xl font-bold text-eds-charcoal"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             🌭 Award-Winning Bangers
           </h2>
@@ -325,7 +325,7 @@ export default function ShopPage() {
         <div className="bg-gradient-to-br from-eds-red to-eds-red-dark rounded-3xl p-8 md:p-12 text-white text-center">
           <h2
             className="text-3xl font-bold mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             🏠 Small Batch Orders
           </h2>

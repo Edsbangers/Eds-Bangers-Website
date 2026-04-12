@@ -128,7 +128,7 @@ export default function Home() {
 
           <h2
             className="text-3xl md:text-4xl font-bold text-eds-gold mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Official Great Taste Producer
           </h2>
@@ -168,7 +168,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto relative z-10">
           <h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive', textShadow: '3px 3px 0 rgba(0,0,0,0.2)' }}
+            style={{ fontFamily: 'var(--font-display), cursive', textShadow: '3px 3px 0 rgba(0,0,0,0.2)' }}
           >
             🏆 Award Cabinet
           </h2>
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             🌭 The Bangers
           </h2>
@@ -292,7 +292,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             🔥 Great Taste Sauces
           </h2>
@@ -344,7 +344,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2
             className="text-4xl md:text-5xl font-bold text-eds-charcoal mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📍 Find Us
           </h2>
@@ -379,7 +379,7 @@ export default function Home() {
             <div className="text-5xl mb-4">💒</div>
             <h3
               className="text-2xl md:text-3xl font-bold mb-4"
-              style={{ fontFamily: '"Fredoka One", cursive' }}
+              style={{ fontFamily: 'var(--font-display), cursive' }}
             >
               Weddings & Events
             </h3>
@@ -401,7 +401,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2
             className="text-4xl md:text-5xl font-bold text-white text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             💬 What People Say
           </h2>
@@ -474,7 +474,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📰 As Seen In
           </h2>
@@ -509,7 +509,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <h2
             className="text-3xl md:text-4xl font-bold text-white mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Let&apos;s Talk Bangers! 🌭
           </h2>

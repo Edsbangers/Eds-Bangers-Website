@@ -32,7 +32,7 @@ export default function BlogPage() {
       <div className="max-w-4xl mx-auto px-4 mb-12">
         <h1
           className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           📝 Blog
         </h1>
@@ -129,7 +129,7 @@ export default function BlogPage() {
         <div className="bg-eds-charcoal rounded-3xl p-8 md:p-12 text-white text-center">
           <h2
             className="text-2xl font-bold mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📬 Stay in the Loop
           </h2>

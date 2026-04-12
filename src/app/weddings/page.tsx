@@ -57,7 +57,7 @@ export default function WeddingsPage() {
             <div className="text-6xl mb-6">💒</div>
             <h1
               className="text-4xl md:text-5xl font-bold mb-4"
-              style={{ fontFamily: '"Fredoka One", cursive' }}
+              style={{ fontFamily: 'var(--font-display), cursive' }}
             >
               Weddings & Events
             </h1>
@@ -86,7 +86,7 @@ export default function WeddingsPage() {
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <h2
           className="text-3xl font-bold text-eds-charcoal text-center mb-8"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           Why Choose Ed&apos;s Bangers?
         </h2>
@@ -113,7 +113,7 @@ export default function WeddingsPage() {
           <div className="text-5xl mb-4">💒</div>
           <h2
             className="text-3xl font-bold text-eds-charcoal mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             Enquire for a Quote for Your Special Day
           </h2>
@@ -143,7 +143,7 @@ export default function WeddingsPage() {
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
           <h2
             className="text-3xl font-bold text-eds-charcoal text-center mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📝 Get a Quote
           </h2>

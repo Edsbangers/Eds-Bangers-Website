@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto px-4">
         <h1
           className="text-4xl font-bold text-eds-charcoal mb-2"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           Privacy Policy
         </h1>

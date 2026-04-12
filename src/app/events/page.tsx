@@ -43,7 +43,7 @@ export default function EventsPage() {
       <div className="max-w-6xl mx-auto px-4 mb-12">
         <h1
           className="text-4xl md:text-5xl font-bold text-eds-charcoal text-center mb-4"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           📅 Events Calendar
         </h1>
@@ -80,7 +80,7 @@ export default function EventsPage() {
       <section className="max-w-6xl mx-auto px-4 mb-16">
         <h2
           className="text-2xl font-bold text-eds-charcoal mb-6"
-          style={{ fontFamily: '"Fredoka One", cursive' }}
+          style={{ fontFamily: 'var(--font-display), cursive' }}
         >
           🔜 Upcoming Events
         </h2>
@@ -119,7 +119,7 @@ export default function EventsPage() {
         <div className="bg-gradient-to-br from-eds-red to-eds-red-dark rounded-3xl p-8 md:p-12 text-white text-center">
           <h2
             className="text-3xl font-bold mb-4"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📍 Want Us at Your Event?
           </h2>
@@ -149,7 +149,7 @@ export default function EventsPage() {
         <section className="max-w-6xl mx-auto px-4">
           <h2
             className="text-2xl font-bold text-eds-charcoal mb-6"
-            style={{ fontFamily: '"Fredoka One", cursive' }}
+            style={{ fontFamily: 'var(--font-display), cursive' }}
           >
             📸 Past Events
           </h2>
